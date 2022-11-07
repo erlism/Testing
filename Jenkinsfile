@@ -20,7 +20,7 @@ pipeline {
         stage('Reporting') {
             steps {
         archiveArtifacts 'report.html,log.html,output.xml'
-      }
-    }
+            }
+        }
     }
 }
