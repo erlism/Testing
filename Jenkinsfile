@@ -12,5 +12,10 @@ pipeline {
                 sh 'python3 --version'
             }
         }
+        stage('Version') {
+            steps {
+                sh 'robot mytest.robot'
+            }
+        }
     }
 }
