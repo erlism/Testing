@@ -17,5 +17,10 @@ pipeline {
                 sh 'robot mytest.robot'
             }
         }
+        stage('Reporting') {
+            steps {
+                archiveArtifacts 'report.html,log.html,output.xml'
+            }
+        }
     }
 }
