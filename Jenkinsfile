@@ -7,5 +7,10 @@ pipeline {
                 echo 'Terve'
             }
         }
+        stage('Version') {
+            steps {
+                sh 'python3 --version'
+            }
+        }
     }
 }
