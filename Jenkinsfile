@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                sh 'python3 main.py'
+                echo 'Terve'
             }
         }
         stage('Version') {
@@ -15,6 +15,11 @@ pipeline {
         stage('Version') {
             steps {
                 sh 'robot mytest.robot'
+            }
+        }
+        stage('Reporting') {
+            steps {
+                archiveArtifacts 'report.html,log.html,output.xml'
             }
         }
     }
